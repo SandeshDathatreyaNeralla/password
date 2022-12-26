@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>passcode</title>
+    <script>
+        
+        function func(){
+            var output=document.getElementById("demo");
+        var i;    
+        var password="";
+        var values="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890@#$%";
+      
+        for( var i=1;i<9;i++){
+            var newchar=Math.random()*values.length;
+            password=password+values.charAt(newchar);
+        }
+        output.innerHTML=password
+        
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>hey thank you for log in in this session</h1>
+    <p id="demo"></p>
+    <button onclick="func()">Submit</button>
+</body>
+</html>
